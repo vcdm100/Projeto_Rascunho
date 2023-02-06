@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html>
+  <head>
+    <style>
+      .red-background {
+        background-color: red;
+      }
+      
+      .blue-background {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="red-button">Red</button>
+    <button id="blue-button">Blue</button>
     
-</body>
+    <script>
+      const redButton = document.getElementById("red-button");
+      const blueButton = document.getElementById("blue-button");
+      const body = document.body;
+      
+      redButton.addEventListener("click", function() {
+        body.className = "red-background";
+      });
+      
+      blueButton.addEventListener("click", function() {
+        body.className = "blue-background";
+      });
+    </script>
+  </body>
 </html>
